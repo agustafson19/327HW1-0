@@ -23,6 +23,8 @@ void place(char plane[M][M+1], Queue* queue, int x, int y);
 
 int main(int argc, char* argv[]) {
     //INITIALIZE
+    int i, j;
+    int x, y, h;
     int fps = 165;
     int argoff = 1;
     if (argc > 1 && !strcmp(argv[1], "--fps")) {
@@ -30,19 +32,18 @@ int main(int argc, char* argv[]) {
         argoff = 3;
     }
     char plane[M][M+1];
-    for (int i = 0; i < M; i++) {
-        for (int j = 0; j < M; j++) {
+    for (i = 0; i < M; i++) {
+        for (j = 0; j < M; j++) {
             plane[j][i] = '0';
         }
     }
-    for (int i = 0; i < M - 1; i++) {
-        plane[i][M] = '\n';
+    for (i = 0; i < M; i++) {
+        plane[i][M] = '\0';
     }
-    plane[M - 1][M] = '\0';
-    for (int i = argoff; i + 2 < argc; i += 3) {
-        int y = atoi(argv[i]);
-        int x = atoi(argv[i + 1]);
-        int h = atoi(argv[i + 2]);
+    for (i = argoff; i + 2 < argc; i += 3) {
+        y = atoi(argv[i]);
+        x = atoi(argv[i + 1]);
+        h = atoi(argv[i + 2]);
         if (h < 0) 
             plane[y][x] = '#';
         else
@@ -53,12 +54,13 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     Queue* queue = malloc(sizeof(Queue));
+    Queuenode* c;
 
     //RUN
     while (1) {
         place(plane, queue, M / 2, M / 2);
         while (!isempty(queue)) {
-            Queuenode* c = dequeue(queue);
+            c = dequeue(queue);
             plane[c->y][c->x] -= 8;
             if (0 < c->x) {
                 if (0 < c->y) {
@@ -86,7 +88,10 @@ int main(int argc, char* argv[]) {
             }
             free(c);
         }
-        printf("%s\n\n", plane);
+        for (i = 0; i < M; i++) {
+            printf("%s\n", plane[i]);
+        }
+        printf("\n");
         usleep(1000000 / fps);
     }
     free(queue);

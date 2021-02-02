@@ -1,0 +1,48 @@
+commit 847eb859fe2c172a32ce2798349899f0f9b9b5f8
+Author: agustafson19 <arvidg@iastate.edu>
+Date:   Tue Feb 2 12:07:46 2021 -0600
+
+    Added a comment
+    
+    Added a comment demonstraiting how the macro M stands for MAX.
+
+commit 3b86e9fb139ef293b953661fd11fb01b32cf1b45
+Author: Arvid <arvidg@iastate.edu>
+Date:   Tue Feb 2 12:01:25 2021 -0600
+
+    Added a README file
+    
+    Added a README file, showing that I implemented a queue.
+
+commit acf7cf609355efb70f9da7d11e2ffd447e8a99d7
+Author: Arvid <arvidg@iastate.edu>
+Date:   Tue Feb 2 11:56:49 2021 -0600
+
+    Added a makefile
+    
+    Added a makefile.
+
+commit 260d64efadb9f6410bd4e887e70d69511e25e06e
+Author: Arvid <arvidg@iastate.edu>
+Date:   Sat Jan 30 16:20:53 2021 -0600
+
+    Changed Style of Code
+    
+    Declared all variables at the beginning of each function.
+    Changed how the plane is displayed from a single printf call to a loop of printf calls.
+
+commit 098af1e951028d1df8e95311db62ca90c339eac2
+Author: agustafson19 <40578471+agustafson19@users.noreply.github.com>
+Date:   Thu Jan 28 15:17:15 2021 -0600
+
+    Removed binary files from repository
+    
+    Removed binary files from repository.
+
+commit 2452a192688f9ee0b421e872f6ee96330c40788e
+Author: agustafson19 <40578471+agustafson19@users.noreply.github.com>
+Date:   Thu Jan 28 15:11:05 2021 -0600
+
+    Initial Commit
+    
+    The basic C code has heretofore been created in full, and tested.

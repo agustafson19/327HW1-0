@@ -3,6 +3,7 @@
 #include<string.h>
 #include<unistd.h>
 
+//short for MAX
 #define M 23
 
 typedef struct Queuenode_struct {

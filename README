@@ -1,0 +1,7 @@
+Arvid Gustafson: arvidg@iastate.edu
+
+The program implements a modified version of the abelian sandpile midel.
+
+My solution uses a basic queue, implemented with a singly-linked list.
+
+The default fps is 165, for that is the framerate of my monitor.
